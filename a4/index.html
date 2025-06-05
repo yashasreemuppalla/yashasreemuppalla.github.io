@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        function addition(){
+            let a = Number(t1.value);
+            let b = Number(t2.value);
+            dvResult.innerHTML += "Addition: " + (a + b) + "<br>";
+        }
+        function subtraction(){
+            let a = Number(t1.value);
+            let b = Number(t2.value);
+            dvResult.innerHTML += "Subtraction: " + (a - b) + "<br>";
+        }
+        function multiplication(){
+            let a = Number(t1.value);
+            let b = Number(t2.value);
+            dvResult.innerHTML += "Multiplication: " + (a * b) + "<br>";
+        }
+        function division(){
+            let a = Number(t1.value);
+            let b = Number(t2.value);
+            if(b === 0){
+                alert("Division by zero is not allowed");
+            } else {
+                dvResult.innerHTML += "Division: " + (a / b) + "<br>";
+            }
+        }
+        function calc(){ 
+            addition();
+            subtraction();
+            multiplication();
+            division();
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="t1" placeholder="Enter value of a">
+    <input type="text" id="t2" placeholder="Enter value of b">
+    <input type="button" value="Result" onclick="calc()">
+    <div id="dvResult"></div>
+</body>
+</html>
