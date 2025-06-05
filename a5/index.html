@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function submitForm() {
+            let name = document.getElementById("t1").value;
+            let email = document.getElementById("t2").value;
+            let password = document.getElementById("t3").value;
+
+            if (name && email && password) {
+                document.getElementById("dvResult").innerHTML = 
+                    "Name: " + name + "<br>" +
+                    "Email: " + email + "<br>" +
+                    "Password: " + password;
+        } else {
+            document.getElementById("dvResult").innerHTML = "Please fill all fields.";
+        }
+    }
+    </script>
+    <input type="text" id="t1" placeholder="Enter Name"><br>
+    <input type="text" id="t2" placeholder="Enter Email"><br>
+    <input type="text" id="t3" placeholder="Enter Password"><br>
+    <input type="button" value="Submit" onclick="submitForm()">
+    <div id="dvResult"></div>
+</body>
+</html>
